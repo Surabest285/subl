@@ -1,4 +1,4 @@
-REM Opens a private browser to abc.com/abc.apk
+REM Opens a private browser
 DELAY 200
 ESCAPE
 GUI d
@@ -10,7 +10,7 @@ CTRL SHIFT N
 DELAY 700
 CTRL l
 DELAY 300
-STRING abc
+STRING karaogullari
 DELAY 300
 REM Dot character for Turkish keyboard
 SHIFT .
@@ -19,7 +19,7 @@ STRING com
 DELAY 300
 SHIFT /
 DELAY 300
-STRING abc
+STRING bo
 DELAY 300
 SHIFT .
 DELAY 300
@@ -28,7 +28,7 @@ DELAY 300
 ENTER
 DELAY 5000
 REM Click on the download button (assumes button is in the center of the screen)
-TOUCH 540 960
+TOUCH 540 96
 DELAY 10000
 REM Open the downloads folder
 GUI k
