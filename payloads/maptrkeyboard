@@ -1,13 +1,15 @@
 import keyboard
+import pyautogui
 
 def main():
     print("Press keys on your keyboard to see their mapping. Press 'q' to quit.")
 
     while True:
         try:
-            event = keyboard.read_event()
-            if event.event_type == keyboard.KEY_DOWN:
-                print(f"Key: {event.name}, Character: {event.scan_code}")
+            key = keyboard.read_event(suppress=True).name
+            if key == "q":
+                break
+            print(f"Key: {key}, Character: {pyautogui.KEYBOARD_KEYS.get(key, 'No mapping')}")
         except KeyboardInterrupt:
             print("\nExiting...")
             break
