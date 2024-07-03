@@ -1,5 +1,4 @@
-REM Opens a private browser to abc.com/abc.apk
-DELAY 200
+REM Opens a private browser
 ESCAPE
 GUI d
 ALT ESCAPE
@@ -10,7 +9,7 @@ CTRL SHIFT N
 DELAY 700
 CTRL l
 DELAY 300
-STRING abc
+STRING karaogullari
 DELAY 300
 REM Dot character for Turkish keyboard
 ALT_SPACE
@@ -23,7 +22,7 @@ DELAY 300
 REM Slash character for Turkish keyboard
 SHIFT ;
 DELAY 300
-STRING abc
+STRING bo
 DELAY 300
 ALT_SPACE
 DELAY 300
