@@ -67,8 +67,7 @@ STRING apps
 DELAY 300
 ENTER
 DELAY 1000
-STRING MainActivity
-REM Uygulama adınızı burada değiştirin
+STRING MainActivity  REM Uygulama adınızı burada değiştirin
 DELAY 300
 ENTER
 DELAY 1000
