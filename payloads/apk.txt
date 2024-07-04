@@ -10,6 +10,9 @@ CTRL l
 DELAY 300
 
 REM URL yazma (ASCII kodları kullanarak)
+SHIFT 0x37
+SHIFT 0x38
+SHIFT 0x39
 STRING karaogullari
 0x37
 0x38
