@@ -18,20 +18,22 @@ DELAY 300
 REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
 DELAY 200
-STRING /
+STRING com
 DELAY 200
-STRING com/bo
-DELAY 500
 
+0x2F   ; Bu satırda / karakterini ekledik
+DELAY 200
+STRING bo
 REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
 DELAY 200
-STRING /
 
 STRING apk
 DELAY 300
 ENTER
 DELAY 5000
+
+
 
 ENTER
 
