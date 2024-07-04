@@ -10,17 +10,20 @@ CTRL l
 DELAY 300
 
 REM URL yazma (ASCII kodları kullanarak)
-STRING karaogullari
-DELAY 300
+STRING kara
+DELAY 400
+STRING ogullari
+DELAY 400
 
 REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
-DELAY 100
-
-STRING com/bo
-DELAY 300
+DELAY 200
+STRING /
+DELAY 200
+STRING com
+DELAY 500
 ENTER
-DELAY 5000
+DELAY 6000
 
 REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
