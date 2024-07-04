@@ -11,9 +11,12 @@ DELAY 300
 
 REM URL yazma (ASCII kodları kullanarak)
 STRING karaogullari
+0x37
+0x38
+0x39
 DELAY 300
-
-SHIFT /
+SHIFT 0x37
+STRING /
 DELAY 200
 STRING com
 DELAY 200
