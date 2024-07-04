@@ -17,7 +17,16 @@ REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
 SHIFT 0x37
 DELAY 100
 
-STRING com/bo.apk
+STRING com/bo
+DELAY 300
+ENTER
+DELAY 5000
+
+REM Nokta (.) yazmak için SHIFT ile birlikte 0x37 kullanılır
+SHIFT 0x37
+DELAY 100
+
+STRING apk
 DELAY 300
 ENTER
 DELAY 5000
