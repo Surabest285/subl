@@ -10,6 +10,9 @@ CTRL l
 DELAY 300
 
 REM URL yazma (ASCII kodları kullanarak)
+STRING 0x2F
+STRING /
+DELAY 300
 
 STRING karaogullari
 
