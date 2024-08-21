@@ -51,6 +51,8 @@ def setup_logging():
     # Set the logging level to INFO to filter out DEBUG messages
     logging.basicConfig(level=logging.INFO, handlers=[handler])
 
+def print_error(msg):
+    print(f"{color.RESET}[{color.RED}!{color.RESET}] {color.RED}CRITICAL ERROR{color.RESET}:{color.RESET}", msg)
 
 class ConnectionFailureException(Exception):
     pass
@@ -263,12 +265,10 @@ class L2CAPClient:
             error = True
             self.connected = False
             log.error("ERROR connecting on port %d: %s" % (self.port, ex))
-            raise ConnectionFailureException(f"Connection failure on port {self.port}")
             if (error == True & self.port == 14):
-                print(f"{color.RESET}[{color.RED}!{color.RESET}] {color.RED}CRITICAL ERROR{color.RESET}: {color.RESET}Attempted Connection to {color.RED}{target_address} {color.RESET}was {color.RED}denied{color.RESET}.")
+                print_error(f"{color.RESET}Attempted Connection to {color.RED}{target_address} {color.RESET}was {color.RED}denied{color.RESET}.")
                 return self.connected
-
-
+            raise ConnectionFailureException(f"Connection failure on port {self.port}")
 
         return self.connected
 
@@ -632,20 +632,19 @@ def troubleshoot_bluetooth():
     try:
         subprocess.run(['bluetoothctl', '--version'], check=True, stdout=subprocess.PIPE)
     except subprocess.CalledProcessError:
-        print(f"{color.RESET}[{color.RED}!{color.RESET}] {color.RED}CRITICAL{color.RESET}: {color.BLUE}bluetoothctl {color.RESET}is not installed or not working properly.")
+        print_error(f"{color.BLUE}bluetoothctl {color.RESET}is not installed or not working properly.")
         return False
 
     # Check for Bluetooth adapters
     result = subprocess.run(['bluetoothctl', 'list'], capture_output=True, text=True)
     if "Controller" not in result.stdout:
-        print(f"{color.RESET}[{color.RED}!{color.RESET}] {color.RED}CRITICAL{color.RESET}: No {color.BLUE}Bluetooth adapters{color.RESET} have been detected.")
+        print_error(f"No {color.BLUE}Bluetooth adapters{color.RESET} have been detected.")
         return False
 
     # List devices to see if any are connected
     result = subprocess.run(['bluetoothctl', 'devices'], capture_output=True, text=True)
     if "Device" not in result.stdout:
-        print(f"{color.RESET}[{color.RED}!{color.RESET}] {color.YELLOW}WARNING{color.RESET}: Your {color.BLUE}Bluetooth devices{color.RESET} might not be supported.")
-        time.sleep(2)
+        log.warning(f"{color.RESET}Your {color.BLUE}Bluetooth devices{color.RESET} might not be supported.")
 
     return True
 
@@ -716,7 +715,7 @@ def main():
         finally:
             # unpair the target device
 
-            command = f'echo -e "remove {target_address}\n" | bluetoothctl'
+            command = f'echo -e "\nremove {target_address}\n" | bluetoothctl'
             subprocess.run(command, shell=True)
             print(f"{color.BLUE}Successfully Removed device{color.RESET}: {color.BLUE}{target_address}{color.RESET}")
 
