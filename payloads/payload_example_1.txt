@@ -1,4 +1,4 @@
-REM Opens a private browser to hackertyper.net
+REM Opens a private browser to youtube.com
 DELAY 200
 ESCAPE
 GUI d
@@ -10,7 +10,7 @@ PRIVATE_BROWSER
 DELAY 700
 CTRL l
 DELAY 300
-STRING hackertyper.net
+STRING youtube.com
 DELAY 300
 ENTER
 DELAY 300
